@@ -25,13 +25,15 @@ document.querySelector('form').addEventListener('submit', function(e) {
     console.log(name, email, password);
     if (name === '') {
         document.querySelector('#name-validation').style.display = 'block';
-        document.querySelector('input[type="text"]').setCustomValidity('Invalid');
+        document.querySelector('input[type="text"]').style.border = '1px solid red';
+        document.querySelector('#name-label').style.color = 'red';
     }
 });
 
 document.querySelector('input[type="text"]').addEventListener('input', function(e) {
-    if (this.value !== '') {
-        this.setCustomValidity('');
+    if (this.value !== '' && this.style.border === '1px solid red') {
         document.querySelector('#name-validation').style.display = 'none';
+        this.style.border = '';
+        document.querySelector('#name-label').style.color = '#31AFF2';
     }
 });
