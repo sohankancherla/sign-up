@@ -48,5 +48,7 @@ Below is a list of the major tools and languages utilized:
 
 ## Acknowledgements
 
-* Calculator Favicon: <a target="_blank" href="https://icons8.com/icon/qROByL3Wa2xL/calculator">Calculator</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+* UI Design: [Dmitry Sergushkin](https://dribbble.com/shots/20330398-Case-study-Sign-up-form)
+* Icons: [Icons8](https://icons8.com/)
+* Icons: [heroicons](https://heroicons.com/)
 * Idea: [The Odin Project](https://www.theodinproject.com/)
