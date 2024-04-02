@@ -28,6 +28,16 @@ document.querySelector('form').addEventListener('submit', function(e) {
         document.querySelector('input[type="text"]').style.border = '1px solid red';
         document.querySelector('#name-label').style.color = 'red';
     }
+    if (email === '') {
+        document.querySelector('#email-validation').style.display = 'block';
+        document.querySelector('input[type="email"]').style.border = '1px solid red';
+        document.querySelector('#email-label').style.color = 'red';
+    }
+    else if (!email.includes('@') || !email.includes('.') || email.length < 5) {
+        document.querySelector('#email-validation2').style.display = 'block';
+        document.querySelector('input[type="email"]').style.border = '1px solid red';
+        document.querySelector('#email-label').style.color = 'red';
+    }
 });
 
 document.querySelector('input[type="text"]').addEventListener('input', function(e) {
@@ -35,5 +45,16 @@ document.querySelector('input[type="text"]').addEventListener('input', function(
         document.querySelector('#name-validation').style.display = 'none';
         this.style.border = '';
         document.querySelector('#name-label').style.color = '#31AFF2';
+    }
+});
+
+document.querySelector('input[type="email"]').addEventListener('input', function(e) {
+    if (this.value !== '' && this.style.border === '1px solid red') {
+        document.querySelector('#email-validation').style.display = 'none';
+        document.querySelector('#email-validation2').style.display = 'none';
+        if (this.value.includes('@') && this.value.includes('.') && this.value.length > 5) {
+            this.style.border = '';
+            document.querySelector('#email-label').style.color = '#31AFF2';
+        }
     }
 });

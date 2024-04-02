@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="column">
-            <form action="" method="post">
+            <form novalidate>
                 <div class="header">
                     <h1>Sign Up</h1>
                     <p>Let's get started with your 30 days free trial</p>
@@ -22,8 +22,8 @@
                         <p id="name-validation" class="validation">Enter your name</p>
                     </div>
                     <div class="input-wrapper">
-                        <input type="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
-                        <label>Email</label>
+                        <input type="email" maxlength="50" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
+                        <label id="email-label">Email</label>
                         <p id="email-validation" class="validation">Enter your email</p>
                         <p id="email-validation2" class="validation">Enter a valid email</p>
                     </div>
