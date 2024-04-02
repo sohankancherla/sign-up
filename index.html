@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="column">
-            <form novalidate>
+            <form novalidate action="/success.html" method="POST">
                 <div class="header">
                     <h1>Sign Up</h1>
                     <p>Let's get started with your 30 days free trial</p>
@@ -28,39 +28,75 @@
                         <p id="email-validation2" class="validation">Enter a valid email</p>
                     </div>
                     <div class="input-wrapper">
-                        <input id="password" type="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
-                        <label>Password</label>
-                        <svg id="eye" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                        <input id="password" maxlength="16" type="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+                        <label id="password-label">Password</label>
+                        <p id="password-validation" class="validation">Enter your password</p>
+                        <p id="password-validation2" class="validation">Password does not meet the requirements</p>
+                        <svg class="pass-svg" id="eye" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                         </svg>
-                        <svg id="eye-slash" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                        <svg class="pass-svg" id="eye-slash" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
                         </svg>
+                    </div>
+                    <div class="password-check">
+                        <div class="row">
+                            <svg id="check-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
+                            </svg>
+                            <p id="p-1">8-16 characters</p>
+                        </div>
+                        <div class="row">
+                            <svg id="check-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
+                            </svg>
+                            <p id="p-2">lowercase letter</p>
+                        </div>
+                        <div class="row">
+                            <svg id="check-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
+                            </svg>
+                            <p id="p-3">uppercase letter</p>
+                        </div>
+                        <div class="row">
+                            <svg id="check-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
+                            </svg>
+                            <p id="p-4">numeric character</p>
+                        </div>
+                        <div class="row">
+                            <svg id="check-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
+                            </svg>
+                            <p id="p-5">special character</p>
+                        </div>      
                     </div>
                 </div>
                 <button type="submit">Sign Up</button>
                 <p id="login">Already have an account? <a>Log In</a></p>
-                <hr class="hr-text" data-content="or">
-                <div class="buttons">
-                    <button class="logo-button" type="button">
-                        <div class="button-container">
-                            <img class="logo" src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google logo">
-                            Sign up with Google
-                        </div>
-                    </button>
-                    <button class="logo-button" type="button">
-                        <div class="button-container">
-                            <img class="logo" src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook logo">
-                            Sign up with Facebook
-                        </div>
-                    </button>
-                    <button class="logo-button" type="button">
-                        <div class="button-container">
-                            <img class="logo" src="https://img.icons8.com/color/48/000000/twitter--v1.png" alt="Twitter logo">
-                            Sign up with Twitter
-                        </div>
-                    </button>
+                <div id="other">
+                    <hr class="hr-text" data-content="or">
+                    <div class="buttons">
+                        <button class="logo-button" type="button">
+                            <div class="button-container">
+                                <img class="logo" src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google logo">
+                                Sign up with Google
+                            </div>
+                        </button>
+                        <button class="logo-button" type="button">
+                            <div class="button-container">
+                                <img class="logo" src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook logo">
+                                Sign up with Facebook
+                            </div>
+                        </button>
+                        <button class="logo-button" type="button">
+                            <div class="button-container">
+                                <img class="logo" src="https://img.icons8.com/color/48/000000/twitter--v1.png" alt="Twitter logo">
+                                Sign up with Twitter
+                            </div>
+                        </button>
+                    </div>
                 </div>
                 <p class="bottom">By signing up to create an account I accept Company's 
                     <a>Terms of Use and Privacy Policy.</a>

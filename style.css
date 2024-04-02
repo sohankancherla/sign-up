@@ -78,14 +78,15 @@ label {
     opacity: 0;
     pointer-events: none;
     background-color: white;
-    padding: 4px;
+    padding-left: 4px;
+    padding-right: 4px;;
     font-size: 11px;
     color: #31AFF2;
 }
 
 input:focus + label,
 input:not(:placeholder-shown) + label {
-    top: -10px;
+    top: -6px;
     left: 12px;
     opacity: 1;
 }
@@ -107,7 +108,7 @@ input:not(:focus) + label {
     color: #606467;
 }
 
-svg {
+.pass-svg {
     height: 1.25rem;
     width: 1.25rem;
     position: absolute;
@@ -208,4 +209,30 @@ a {
     margin: 4px;
     text-align: left;
     display: none;
+}
+
+.password-check {
+    align-self: start;
+    text-align: left;
+    margin-left: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #B3B3B3;
+    display: none;
+}
+
+.password-check svg {
+    position: relative;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 8px;
+    stroke: #B3B3B3;
+    fill: #B3B3B3
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
