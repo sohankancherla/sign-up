@@ -15,9 +15,18 @@
                     <p>Let's get started with your 30 days free trial</p>
                 </div>
                 <div class="inputs">
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
+                    <div class="input-wrapper">
+                        <input type="text" placeholder="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'">
+                        <label>Name</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
+                        <label>Email</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+                        <label>Password</label>
+                    </div>
                 </div>
             </form>
         </div>

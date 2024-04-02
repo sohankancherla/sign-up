@@ -62,14 +62,42 @@ p {
     justify-content: center;
 }
 
+.input-wrapper {
+    position: relative;
+}
+
 input {
     width: 330px;
     height: 40px;
     margin: 8px 0;
-    padding: 8px;
+    padding: 8px 12px;
     border: 1px solid #D9DAE5;
     border-radius: 6px; 
 }
+
+label {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    background-color: white;
+    padding: 4px;
+    font-size: 11px;
+    color: #D9DAE5;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    color: #31AFF2;
+    top: -3px;
+    left: 12px;
+    opacity: 1;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #31AFF2;
+}
+
 
 ::placeholder {
     color: #606467;
