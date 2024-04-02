@@ -83,6 +83,10 @@ label {
     color: #31AFF2;
 }
 
+input:invalid + label {
+    color: red;
+}
+
 input:focus + label,
 input:not(:placeholder-shown) + label {
     top: -10px;
@@ -200,4 +204,16 @@ a {
     padding-bottom: 40px;;
     font-size: 12px;
     width: 300px;
+}
+
+.validation {
+    color: red;
+    font-size: 12px;
+    margin: 4px;
+    text-align: left;
+    display: none;
+}
+
+input:invalid {
+    border: 1px solid red;
 }
