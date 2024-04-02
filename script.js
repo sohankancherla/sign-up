@@ -55,7 +55,7 @@ document.querySelector('form').addEventListener('submit', function(e) {
         verify = false;
     }
     if (verify) {
-        document.querySelector('form').submit();
+        window.location.href = 'success.html';
     }
 });
 
