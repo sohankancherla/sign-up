@@ -40,7 +40,7 @@ Below is a list of the major tools and languages utilized:
 
 ## Try It
 
-[Visit Calculator](https://sohankancherla.github.io/calculator/)
+[Visit Sign Up](https://sohankancherla.github.io/sign-up/)
 
 ## Authors
 
